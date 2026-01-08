@@ -18,7 +18,7 @@ public class ForceIntensity : MonoBehaviour
     }
 
     public void applyForce () {
-        this.GetComponent<RigidBody>().AddForce(Vector3.up*intensidade,ForceMode.Impulse);
+        this.GetComponent<Rigidbody>().AddForce(Vector3.up*intensidade,ForceMode.Impulse);
 
     }
 
