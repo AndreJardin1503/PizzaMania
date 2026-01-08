@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Oculus.Interaction.Editor;
 
 public class PizzaStart : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PizzaStart : MonoBehaviour
 
         Instantiate(
             pizza,
-            new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z),
+            new Vector3(transform.position.x, transform.position.y - 0f, transform.position.z),
             transform.rotation
         );
 
