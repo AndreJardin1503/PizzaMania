@@ -8,7 +8,7 @@ public class ForceIntensity : MonoBehaviour
     public float intensidade;
     public GameObject hand;
 
-    void OnCollisionEnter(Collision collision)
+    /*void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "l_handMeshNode" || collision.gameObject.name == "r_handMeshNode")
         {
@@ -16,7 +16,16 @@ public class ForceIntensity : MonoBehaviour
 
         }
         
-    }
+    }*/
+
+    /*void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "l_handMeshNode" || other.gameObject.name == "r_handMeshNode")
+        {
+            hand = other.gameObject;
+
+        }
+    }*/
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,7 +45,7 @@ public class ForceIntensity : MonoBehaviour
 
         this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
-        this.gameObject.GetComponent<Rigidbody>().AddForce(this.hand.transform.forward*intensidade,ForceMode.Impulse);
+        this.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.right*intensidade,ForceMode.Impulse);
             print(this.GetComponent<Rigidbody>().linearVelocity);
             print(this.transform.forward);
             print(intensidade);
@@ -54,7 +63,7 @@ public class ForceIntensity : MonoBehaviour
             // Wait for 1 second (scaled time)
             yield return new WaitForSeconds(0.2f);
 
-            this.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward*intensidade + this.transform.up*intensidade,ForceMode.Impulse);
+            this.gameObject.GetComponent<Rigidbody>().AddForce(this.hand.transform.forward*intensidade + this.transform.up*intensidade,ForceMode.Impulse);
             print(this.GetComponent<Rigidbody>().linearVelocity);
             print(this.transform.forward);
             print(intensidade);
