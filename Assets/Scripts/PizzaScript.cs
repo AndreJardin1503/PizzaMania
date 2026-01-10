@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PizzaScript : MonoBehaviour
 {
-    float speed = 3f;
-    float exitSpeed = 2f;
+    float speed = 0.4f;
+    float exitSpeed = 0.3f;
 
     public Mesh cookedMesh;
 
@@ -56,7 +56,7 @@ public class PizzaScript : MonoBehaviour
             frontDoorAnimator.SetTrigger("open");
         }
 
-        if (state == PizzaState.Entering && other.CompareTag("OvenCenter"))
+        if (state == PizzaState.Entering && other.CompareTag("OvenTrigger"))
         {
             frontDoorAnimator.SetTrigger("close");
             speed = 0;

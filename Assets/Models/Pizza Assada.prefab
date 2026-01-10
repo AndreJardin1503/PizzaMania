@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7674984066325935385}
   - component: {fileID: 115499785677387506}
   - component: {fileID: 2926440770226395024}
+  - component: {fileID: -1545555006589315840}
   m_Layer: 0
   m_Name: Pizza Assada
-  m_TagString: Untagged
+  m_TagString: Pizza
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bdcbbb1bdffdd4ba776d902c2dd878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PizzaScript
+  cookedMesh: {fileID: 0}
 --- !u!54 &115499785677387506
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -153,3 +155,15 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7757028323189577970, guid: bf605e79d6c5e9543ac883642881bbe4, type: 3}
+--- !u!114 &-1545555006589315840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4641937070630858642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624214eaa2aa3f64786c7c8101b845d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckScript

@@ -9,6 +9,15 @@ TagManager:
   - FrontTrigger
   - OvenTrigger
   - ExitTrigger
+  - Pizza
+  - CheckTrigger
+  - Fish
+  - Pepper
+  - Pepe
+  - Pineapple
+  - Mushroom
+  - Olive
+  - Order
   layers:
   - Default
   - TransparentFX
