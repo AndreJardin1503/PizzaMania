@@ -6,6 +6,17 @@ public class ForceIntensity : MonoBehaviour
 {
 
     public float intensidade;
+    public GameObject hand;
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "l_handMeshNode" || collision.gameObject.name == "r_handMeshNode")
+        {
+            hand = collision.gameObject;
+
+        }
+        
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,7 +36,7 @@ public class ForceIntensity : MonoBehaviour
 
         this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
-        this.gameObject.GetComponent<Rigidbody>().AddForce(this.transform.forward*intensidade,ForceMode.Impulse);
+        this.gameObject.GetComponent<Rigidbody>().AddForce(this.hand.transform.forward*intensidade,ForceMode.Impulse);
             print(this.GetComponent<Rigidbody>().linearVelocity);
             print(this.transform.forward);
             print(intensidade);
