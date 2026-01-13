@@ -9,9 +9,13 @@ public class PizzaScript : MonoBehaviour
 
     private Animator frontDoorAnimator;
     private Animator sideDoorAnimator;
+    private GameSpeedScript gameSpeedManager;
 
     private float cookTime = 3f;
     private float timer;
+
+    public Material cutPizza;
+    public bool isCut = false;
 
     enum PizzaState { Entering, Cooking, Exiting }
     PizzaState state = PizzaState.Entering;
@@ -20,6 +24,21 @@ public class PizzaScript : MonoBehaviour
     {
         frontDoorAnimator = GameObject.FindWithTag("FrontDoor").GetComponent<Animator>();
         sideDoorAnimator = GameObject.FindWithTag("SideDoor").GetComponent<Animator>();
+        gameSpeedManager = GameObject.FindWithTag("GameManager").GetComponent<GameSpeedScript>();
+
+        speed = gameSpeedManager.pizzaSpeed;
+        exitSpeed = gameSpeedManager.exitSpeed;
+
+        frontDoorAnimator.speed = gameSpeedManager.ovenSpeed;
+        sideDoorAnimator.speed = gameSpeedManager.ovenSpeed;
+
+        cookTime -= gameSpeedManager.ovenSpeed;
+
+        if (cookTime < 0.5f)
+        {
+            cookTime = 0.5f;
+        }
+        
     }
 
     void FixedUpdate()
@@ -68,5 +87,19 @@ public class PizzaScript : MonoBehaviour
             sideDoorAnimator.SetTrigger("close");
             exitSpeed = 0;
         }
+
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (state == PizzaState.Exiting && collision.gameObject.CompareTag("Cutter"))
+        {
+            MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+            meshRenderer.material = cutPizza;
+            isCut = true;
+        }
     }
 }
+
+

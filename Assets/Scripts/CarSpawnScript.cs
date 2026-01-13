@@ -9,16 +9,10 @@ public class CarSpawnScript : MonoBehaviour
         SpawnCar();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void SpawnCar()
+    public void SpawnCar()
     {
         int carNum = Random.Range(0, cars.Length);
         GameObject car = cars[carNum];
-        Instantiate(car);
+        Instantiate(car,transform.position, transform.rotation);
     }
 }

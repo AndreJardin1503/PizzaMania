@@ -18,6 +18,12 @@ TagManager:
   - Mushroom
   - Olive
   - Order
+  - CarTrigger
+  - GameManager
+  - Cutter
+  - ClosedBox
+  - CarDeleteTrigger
+  - CarSpawner
   layers:
   - Default
   - TransparentFX
