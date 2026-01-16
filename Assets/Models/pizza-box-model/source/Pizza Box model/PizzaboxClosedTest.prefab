@@ -153,3 +153,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab57d13fcd768c2418596cc98c8dd071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PizzaBoxClosed
+  box: {fileID: 2228746820172730090, guid: d7e2bbed99236404bad66b0ecab45529, type: 3}
+  isRightOrder: 0

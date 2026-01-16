@@ -4,11 +4,11 @@ public class PizzaBoxScript : MonoBehaviour
 {
     public GameObject closedBox;
     public bool isRight;
+    private Transform spawnPoint;
 
-
-    void Start()
+    private void Awake()
     {
-
+        spawnPoint = GameObject.FindWithTag("PizzaBoxSpawn").transform;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,6 +23,11 @@ public class PizzaBoxScript : MonoBehaviour
 
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Road"))
+        {
+            this.transform.position = spawnPoint.position;
         }
     }
 }

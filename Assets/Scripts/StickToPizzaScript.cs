@@ -33,11 +33,13 @@ public class StickToPizzaScript : MonoBehaviour
             transform.SetParent(collision.transform);
             //transform.localScale = new Vector3(0.4f, 0.4f, 0.4f);
 
+
             isOnPizza = true;
             Instantiate(hitVfx, transform.position, transform.rotation);
-            Debug.Log("hai com " + collision.collider.name);
             Instantiate(ingredientPrefab, spawnPoint.position, spawnPoint.rotation);
 
+
+            this.GetComponent<Collider>().enabled = false;
             this.GetComponent<Rigidbody>().isKinematic = true;
             animator.enabled = false;
             return;

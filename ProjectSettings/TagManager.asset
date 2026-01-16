@@ -29,6 +29,8 @@ TagManager:
   - ScoreBoard
   - VfxTransform
   - PizzaSpawner
+  - PizzaBoxSpawn
+  - Road
   layers:
   - Default
   - TransparentFX
