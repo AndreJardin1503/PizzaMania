@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 41146201288487558}
   - component: {fileID: 5853876921604461843}
   - component: {fileID: -3645761295561754390}
+  - component: {fileID: -3770975538911424916}
   m_Layer: 0
   m_Name: PizzaboxClosedTest
   m_TagString: ClosedBox
@@ -140,3 +141,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3770975538911424916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4359629286682349699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab57d13fcd768c2418596cc98c8dd071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PizzaBoxClosed

@@ -639,6 +639,7 @@ GameObject:
   - component: {fileID: 3456434720115965491}
   - component: {fileID: 4786118220659679950}
   - component: {fileID: 8745138947236030391}
+  - component: {fileID: 3766778493882034170}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -756,7 +757,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 124
   m_CollisionDetection: 0
 --- !u!114 &4786118220659679950
 MonoBehaviour:
@@ -770,6 +771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5978aa2cbf76ef49b0b71acfd64bbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CarScript
+  angryVfx: {fileID: 3166610503754339552, guid: 21e602331c34a5648af3f5d831c95e12, type: 3}
+  happyVfx: {fileID: 6548313666616405364, guid: 0ebcd9be935519e429dd740656d47587, type: 3}
 --- !u!65 &8745138947236030391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -791,6 +794,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 384.76877, y: 468.87277, z: 1038.2839}
   m_Center: {x: 18.476818, y: 77.90548, z: 31.699728}
+--- !u!95 &3766778493882034170
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4139590995316451201}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e103cf5fb66812444afe8e6bec09305c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6548627781223478531
 GameObject:
   m_ObjectHideFlags: 0

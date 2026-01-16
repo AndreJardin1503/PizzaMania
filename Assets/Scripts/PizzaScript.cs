@@ -84,6 +84,7 @@ public class PizzaScript : MonoBehaviour
 
         if (state == PizzaState.Exiting && other.CompareTag("ExitTrigger"))
         {
+            //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
             sideDoorAnimator.SetTrigger("close");
             exitSpeed = 0;
         }

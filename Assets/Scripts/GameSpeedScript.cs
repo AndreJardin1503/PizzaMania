@@ -6,6 +6,9 @@ public class GameSpeedScript : MonoBehaviour
     public float pizzaSpeed;
     public float exitSpeed;
     public float ovenSpeed;
+
+    public int totalScore = 0;
+
     void Start()
     {
         pizzaSpeed = 0.4f;

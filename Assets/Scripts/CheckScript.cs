@@ -10,7 +10,7 @@ public class CheckScript : MonoBehaviour
     // 4 = Mushroom
     // 5 = Olive
 
-    private bool isCorrect = true;
+    public bool isCorrect = true;
     private bool[] hasIngredients = new bool[6];
 
     private OrderScript order;

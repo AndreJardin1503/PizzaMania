@@ -24,11 +24,16 @@ TagManager:
   - ClosedBox
   - CarDeleteTrigger
   - CarSpawner
+  - Mesa
+  - FxTemporaire
+  - ScoreBoard
+  - VfxTransform
+  - PizzaSpawner
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ingredients
   - Water
   - UI
   - 
