@@ -5,10 +5,19 @@ public class PizzaBoxScript : MonoBehaviour
     public GameObject closedBox;
     public bool isRight;
     private Transform spawnPoint;
+    private Animator animator;
 
     private void Awake()
     {
         spawnPoint = GameObject.FindWithTag("PizzaBoxSpawn").transform;
+        
+    }
+
+    private void OnEnable()
+    {
+        Debug.Log("u");
+        animator = GetComponent<Animator>();
+        animator.SetTrigger("spawn");
     }
 
     private void OnCollisionEnter(Collision collision)

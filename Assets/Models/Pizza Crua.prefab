@@ -133,7 +133,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!64 &2926440770226395024
 MeshCollider:
@@ -169,3 +169,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 624214eaa2aa3f64786c7c8101b845d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CheckScript
+  isCorrect: 1

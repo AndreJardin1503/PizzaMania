@@ -40,6 +40,7 @@ public class CheckScript : MonoBehaviour
             }
 
             isCorrect = true;
+            
 
             for (int i = 0; i < hasIngredients.Length; i++)
             {
@@ -67,5 +68,20 @@ public class CheckScript : MonoBehaviour
 
             Debug.Log("Pedido correto? " + isCorrect);
         }
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("Pineapple")) hasIngredients[0] = true;
+            else if (child.CompareTag("Pepe")) hasIngredients[1] = true;
+            else if (child.CompareTag("Fish")) hasIngredients[2] = true;
+            else if (child.CompareTag("Pepper")) hasIngredients[3] = true;
+            else if (child.CompareTag("Mushroom")) hasIngredients[4] = true;
+            else if (child.CompareTag("Olive")) hasIngredients[5] = true;
+        }
+        order.UpdateBoard(hasIngredients);
     }
 }

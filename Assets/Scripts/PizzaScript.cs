@@ -14,6 +14,8 @@ public class PizzaScript : MonoBehaviour
     private float cookTime = 3f;
     private float timer;
 
+    private Material roller;
+
     public Material cutPizza;
     public bool isCut = false;
 
@@ -39,6 +41,8 @@ public class PizzaScript : MonoBehaviour
             cookTime = 0.5f;
         }
         
+        roller = GameObject.FindWithTag("Roller").GetComponent<MeshRenderer>().material;
+
     }
 
     void FixedUpdate()
@@ -47,6 +51,10 @@ public class PizzaScript : MonoBehaviour
         {
             transform.Translate(0, 0, -speed * Time.deltaTime);
         }
+
+        Vector2 offset = roller.mainTextureOffset;
+        offset.y += speed / -75;
+        roller.mainTextureOffset = offset;
 
         if (state == PizzaState.Cooking)
         {

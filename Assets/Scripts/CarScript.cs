@@ -21,6 +21,7 @@ public class CarScript : MonoBehaviour
 
     private Animator animator;
     private PizzaSpawner pizzaSpawner;
+    private OrderScript order;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class CarScript : MonoBehaviour
         vfxTransform = GameObject.FindWithTag("VfxTransform").transform;
         pizzaSpawner = GameObject.FindWithTag("PizzaSpawner").GetComponent<PizzaSpawner>();
         animator = GetComponent<Animator>();
+        order = GameObject.FindWithTag("Order").GetComponent<OrderScript>();
     }
 
     // Update is called once per frame
@@ -70,6 +72,7 @@ public class CarScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ClosedBox"))
         {
+            order.ResetBoard();
             Destroy(collision.gameObject);
             pizzaSpawner.CreatePizza();
 
@@ -77,7 +80,7 @@ public class CarScript : MonoBehaviour
             {        
                 
                 speedScript.totalScore++;
-                score.text = $"{speedScript.totalScore}00 ";
+                score.text = $"Score: {speedScript.totalScore}00 ";
                 Instantiate(happyVfx, vfxTransform.position, transform.rotation);
                 animator.SetTrigger("pop");
             }
