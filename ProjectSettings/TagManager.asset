@@ -38,6 +38,8 @@ TagManager:
   - ImagePine
   - ImageMush
   - Roller
+  - ResetText
+  - Timer
   layers:
   - Default
   - TransparentFX
